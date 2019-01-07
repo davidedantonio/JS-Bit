@@ -1,8 +1,10 @@
 # The `let` keyword
 
+`let` allows you to declare variables that are limited in scope to the block, statement, or expression on which it is used. This is unlike the `var` keyword, which defines a variable globally, or locally to an entire function regardless of block scope.
+
 ## Declaring function scoped variables
 
-The JavaScript variables that are declared using the var keyword are called as function scoped variables.
+The JavaScript variables that are declared using the var keyword are called as function scoped variables. The function scoped variables are accessible globally to the script, that is, throughout the script, if declared outside a function. Similarly, if the function scoped variables are declared inside a function, then they become accessible throughout the function, but not outside the function.
 
 ```javascript
 var tomato = '🍅'; //accessible globally
@@ -92,3 +94,6 @@ myFunction();
 console.log(a); // 1
 console.log(b); // 2
 ```
+
+You may be wondering why not just make the `var` keyword to define the block-scoped variables instead of introducing the `let` keyword? The reason why the
+`var` keyword wasn't made enough to define block-scoped variables, instead of introducing the `let` keyword, was for the sake of backward compatibility.
