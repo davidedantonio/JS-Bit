@@ -9,23 +9,24 @@ Before ES6, for providing the values of an array as function argument, the progr
 
 ```javascript
 function sum(a, b) {
-return a + b;
+  return a + b
 }
-var data = [1, 4];
-var result = sum.apply(null, data);
-console.log(result); // Output "5"
+
+var data = [1, 4]
+var result = sum.apply(null, data)
+console.log(result) // Output "5"
 ```
 Here, the apply method takes an array, extracts the values, passes them as individual arguments to the function, and then calls it. ES6 provides an easy way to do this, using the spread operator:
 
 ```javascript
 function sum(a, b) {
-  return a + b;
+  return a + b
 }
 
-let data = [1, 4];
-let result = sum(...data);
+let data = [1, 4]
+let result = sum(...data)
 
-console.log(result); // Output "5"
+console.log(result) // Output "5"
 ```
 
 ## Making array values a part of another array
@@ -33,10 +34,10 @@ console.log(result); // Output "5"
 It can also be used to make the array values a part of another array.
 
 ```javascript
-let array1 = [2,3,4];
-let array2 = [1, ...array1, 5, 6, 7];
+let array1 = [2, 3, 4]
+let array2 = [1, ...array1, 5, 6, 7]
 
-console.log(array2); //Output "1, 2, 3, 4, 5, 6, 7"
+console.log(array2) //Output "1, 2, 3, 4, 5, 6, 7"
 ```
 
 ## Pushing the values of an array into another array
@@ -61,15 +62,15 @@ console.log(doughnutEs6) // [ '🍅', '🍐', '🍖,', '🍩' ]
 Multiple arrays can be spread on a single line of expression:
 
 ```javascript
-let array1 = [1];
-let array2 = [2];
-let array3 = [...array1, ...array2, ...[3, 4]]; // multi array spread
-let array4 = [5];
+let array1 = [1]
+let array2 = [2]
+let array3 = [...array1, ...array2, ...[3, 4]] // multi array spread
+let array4 = [5]
 
 function sum(a, b, c, d, e) {
-  return a + b + c + d + e;
+  return a + b + c + d + e
 }
 
-let result = sum(...array3, ...array4); // multi array spread
-console.log(result); // Output "15"
+let result = sum(...array3, ...array4) // multi array spread
+console.log(result) // Output "15"
 ```

@@ -53,40 +53,40 @@ myFunction()
 When you declare a variable using the var keyword that is already declared using var keyword (in the same scope) then it's overwritten.
 
 ```javascript
-var a = '🍅';
-var a = '🍖';
+var a = '🍅'
+var a = '🍖'
 
-console.log(a);
+console.log(a)
 
 function myFunction() {
- var b = '🍖';
- var b = '🍐';
- console.log(b);
+ var b = '🍖'
+ var b = '🍐'
+ console.log(b)
 }
 
-myFunction(); // '🍖' '🍐'
+myFunction() // '🍖' '🍐'
 ```
 
 When you declare a variable with a name that's already accessible in a function (or inner function), or is a sub-block using var or the let keyword respectively, then it's a different variable.
 
 ```javascript
-var a = 1;
-let b = 2;
+var a = 1
+let b = 2
 
 function myFunction() {
-  var a = 3; //different variable
-  let b = 4; //different variable
+  var a = 3 //different variable
+  let b = 4 //different variable
 
   if(true) {
-    var a = 5; //overwritten
-    let b = 6; //different variable
+    var a = 5 //overwritten
+    let b = 6 //different variable
 
-    console.log(a); // 5
-    console.log(b); // 6
+    console.log(a) // 5
+    console.log(b) // 6
   }
 
-  console.log(a); // 5
-  console.log(b); // 4
+  console.log(a) // 5
+  console.log(b) // 4
 }
 
 myFunction();
