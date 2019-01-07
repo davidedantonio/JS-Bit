@@ -27,3 +27,5 @@ doSomething(1, 2, 3, 4, 5)
 ```
 
 The arguments object is not an array object. Therefore, to do array operations on the arguments object, you need to first convert it to an array. As the ES6 rest parameter is an array type, it's easier to work with it.
+
+![Rest Parameter](images/03-the-rest-parameter.png)
