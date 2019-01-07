@@ -1,4 +1,4 @@
-#The `let` keyword
+# The `let` keyword
 
 ## Declaring function scoped variables
 
