@@ -120,8 +120,37 @@ console.log(b) // 3
 An object destructuring assignment is used to the extract property values of an object and assign them to the variables. Before ES6 coming, the programmers to do it assigned the values to the variables one at a time in this way:
 
 ```javascript
-var object {name: "Davide", age: 35}
+var object = {name: "Davide", age: 35}
 var name = object.name
 var age = object.age
 ```
 
+In ES6, we can do this in just one line statement, using the object destructuring assignment:
+
+```javascript
+let object = {name: "Davide", age: 35}
+let { name: x, age: y } = object
+console.log(name, age) // Davide 35
+```
+
+Here we are create the variables and object on the same line.
+
+### Default values for the variables
+
+You can also provide the default values to the variables, if the object property is undefined while destructuring.
+
+```javascript
+let {a, b, c = 3} = {a: "1", b: "2"};
+console.log(c); //Output "3"
+```
+
+### Destructuring nested objects
+
+We can also the extract property values from the nested objects, that is, the objects within the objects.
+
+```javascript
+var {name, otherInfo: {age}} = {name: "Davide", otherInfo: {age: 35}};
+console.log(name, age); // Davide 35
+```
+
+![Rest Parameter](images/04-destructuring-assignment-1.png)
