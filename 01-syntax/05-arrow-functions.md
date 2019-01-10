@@ -103,4 +103,11 @@ const controller = {
 
 Lexical `this` in the arrow function callback in the previous snippet now points to the same value as in the enclosing `makeRequest(..)` function. In other words, `=>` is just a syntactic abbreviation for `const self = this`. In cases where `const self = this` (or, alternatively, a function `.bind(this)` call) would normally be helpful, `=>` arrow functions are a nicer alternative operating on the same principle.
 
+## Other differences between the arrow and traditional functions
+
+The arrow functions cannot be used as object constructors that is, the new operator cannot be applied on them.
+
+Apart from syntax, the this value, and the new operator, everything else is the same between the arrow and traditional functions, that is, they both are the instances of the Function constructor.
+
+
 ![Arrow Functions](images/05-arrow-functions.png)
