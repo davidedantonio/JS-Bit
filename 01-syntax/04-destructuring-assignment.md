@@ -154,5 +154,5 @@ let {name, otherInfo: {age}} = object
 console.log(name, age) // Davide 35
 ```
 
-![Rest Parameter](images/04-destructuring-assignment-1.png)
-![Rest Parameter](images/04-destructuring-assignment-2.png)
+![Destructuring Assignemnt 1](images/04-destructuring-assignment-1.png)
+![Destructuring Assignemnt 2](images/04-destructuring-assignment-2.png)
